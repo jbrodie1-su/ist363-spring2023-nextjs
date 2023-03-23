@@ -2,17 +2,19 @@ import Image from 'next/image';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 
-import { getAllVehicles } from '../../lib/api';
+import { getAllVehicles, getAllColors} from '../../lib/api';
 
 export async function getStaticProps() {
   // Get external data from the file system, API, DB, etc.
   const data = getAllVehicles();
+  const colors = getAllColors();
 
   // The value of the `props` key will be
   //  passed to the `Home` component
   return {
     props: {
-      data
+      data,
+      colors
     }
   }
 }
