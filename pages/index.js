@@ -1,12 +1,14 @@
 import { useState } from 'react';
 
 import Button from '../components/Button';
+import CarColorPicker from '../components/CarColorPicker';
 import Header from '../components/Header';
 import Image from 'next/image';
 import Layout from '../components/Layout';
-import Swatch from '../components/Swatch';
+
 
 import { getAllVehicles, getAllColors } from '../lib/api';
+
 
 export async function getStaticProps() {
   // Get external data from the file system, API, DB, etc.
@@ -23,12 +25,11 @@ export async function getStaticProps() {
   }
 }
 
-const Homepage = ({data, colors}) => {
+const Homepage = ({ data, colors}) => {
   //console.log({data});
   return <Layout>
     <h1>Homepage</h1>
-    <CarColorPicker colors={colors}/>
-     
+    <CarColorPicker colors={colors} />
   </Layout>
 }
 export default Homepage

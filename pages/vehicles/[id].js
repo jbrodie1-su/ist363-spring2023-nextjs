@@ -23,6 +23,31 @@ export async function getStaticProps({ params }) {
     // Get external data from the file system, API, DB, etc.
     const data = getSingleVehicleBySlug(slug);
   
+    import Image from 'next/image';
+import Layout from '../../components/Layout';
+import Link from 'next/link';
+
+import { getAllCarSlugs, getSingleVehicleBySlug } from '../../lib/api';
+
+export async function getStaticPaths() {
+    const slugs = getAllCarSlugs();
+    const paths = slugs.map(slug => {
+          return {
+              params: {
+                  id: slug,
+              }
+          }
+    })
+    return {
+      paths,
+      fallback: false,
+    };
+}
+export async function getStaticProps({ params }) {
+    const slug = params.id;
+    // Get external data from the file system, API, DB, etc.
+    const data = getSingleVehicleBySlug(slug);
+  
     // The value of the `props` key will be
     //  passed to the `Home` component
     return {
