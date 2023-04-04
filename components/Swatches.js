@@ -1,6 +1,6 @@
 import classnames from 'classnames/bind';
 import Icon from './Icon';
-import styles from './swatches.module.scss';
+import styles from './swatches.modules.scss';
 
 const cx = classnames.bind(styles);
 
