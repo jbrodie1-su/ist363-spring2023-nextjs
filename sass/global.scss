@@ -1,3 +1,5 @@
+@use'./abstracts/vars';
 body {
-    background-color: green;
+    background-color: vars.$SUorange;
+
 }
