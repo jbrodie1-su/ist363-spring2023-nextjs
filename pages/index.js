@@ -10,7 +10,6 @@ import SectionCTA from '../components/SectionCTA';
 import Showcase from '../components/Showcase';
 
 
-
 import { getAllVehicles, getAllColors } from '../lib/api';
 
 
@@ -33,10 +32,9 @@ const Homepage = ({ data, colors}) => {
   //console.log({data});
   return <Layout>
     <Showcase />
-   <LocationPicker />
+    <LocationPicker />
     <CarColorPicker colors={colors} />
     <SectionCTA />
-    <Showcase />
   </Layout>
 }
 export default Homepage
