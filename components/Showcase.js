@@ -1,6 +1,8 @@
+import styles from './showcase.module.scss';
 
-import styles from 'showcase.module.scss'
 const Showcase = () => {
-    return 
-
+    return <section className={styles.showcase}>
+        Showcase goes here.
+    </section>
 }
+export default Showcase;
