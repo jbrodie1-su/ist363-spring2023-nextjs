@@ -1,6 +1,14 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
+module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'ist-363-subaru-spring-2023.local/',
+      },
+      {
+          protocol: 'https', 
+          hostname: 'subaru.ist363.xyz',
+      }
+    ],
+  },
 }
-
-module.exports = nextConfig
