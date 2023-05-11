@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Heading from './Heading';
 import Image from 'next/image';
